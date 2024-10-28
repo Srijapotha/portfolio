@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 7% 8%;
+    --foreground: 180 9% 98%;
+
+    --card: 160 6% 10%;
+    --card-foreground: 180 9% 98%;
+
+    --popover: 160 6% 10%;
+    --popover-foreground: 180 9% 98%;
+
+    --primary: 161 88% 45%;
+    --primary-foreground: 120 9% 2%;
+
+    --secondary: 157 8% 19%;
+    --secondary-foreground: 180 9% 98%;
+
+    --muted: 164 7% 29%;
+    --muted-foreground: 162 8% 49%;
+
+    --accent: 161 71% 19%;
+    --accent-foreground: 180 9% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 156 8% 12%;
+    --input: 158 9% 18%;
+    --ring: 161 88% 40%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  *:hover {
+    cursor:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-8 -8 16 16"><circle cx="0" cy="0" r="4" fill="white"/></svg>')
+        8 8,
+      auto;
+  }
+  * {
+    cursor:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-8 -8 16 16"><circle cx="0" cy="0" r="4" fill="white"/></svg>')
+        8 8,
+      auto;
+    @apply border-border;
+  }
+  body {
+    font-family: "Outfit", system-ui;
+    font-style: normal;
+
+    @apply bg-background text-foreground;
+  }
+
+  .border-grd {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1),
+      /* rgba(255, 255, 255, 0) */
+    );
+  }
+  .heading::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 4px;
+    background: white;
+    border-radius: 20px;
+  }
+  header {
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0) 1px,
+      hsl(var(--background)) 1px
+    );
+    background-size: 4px 4px;
+    backdrop-filter: blur(4px);
+  }
+  header::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: hsl(var(--foreground));
+    opacity: 0.2;
+  }
+}
+
+.node::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  border-color: hsl(var(--border));
+  @apply -translate-x-1/2 -translate-y-1/2 rounded-full border-4 bg-background;
+}
+.c {
+  --uib-size: 40px;
+  --uib-color: hsl(var(--primary));
+  --uib-speed: 2s;
+  --uib-bg-opacity: 0;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+  will-change: transform;
+  overflow: visible;
+}
+
+.car {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+  will-change: stroke-dasharray, stroke-dashoffset;
+  transition: stroke 0.5s ease;
+}
+
+.track {
+  fill: none;
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+  transition: stroke 0.5s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    stroke-dasharray: 0, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 75, 150;
+    stroke-dashoffset: -25;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
