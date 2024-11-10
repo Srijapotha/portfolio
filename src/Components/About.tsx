@@ -24,7 +24,7 @@ export default function About() {
             /> */}
           </div>
           <div className="flex items-center justify-center pt-10 text-lg leading-loose tracking-wider text-white/90 lg:p-8">
-            I&apos;m a Full-stack web developer with 4+ years of experience
+            I&apos;m a Full-stack web developer with 2+ years of experience
             building websites that are easy to use and look great. I know how to
             use MERN and FARM tools, which include HTML, CSS, JavaScript, React,
             Node.js, Python, and SQL. I&apos;m also good at using AI to make
