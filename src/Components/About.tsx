@@ -24,15 +24,7 @@ export default function About() {
             /> */}
           </div>
           <div className="flex items-center justify-center pt-10 text-lg leading-loose tracking-wider text-white/90 lg:p-8">
-            I&apos;m a Full-stack web developer with 2+ years of experience
-            building websites that are easy to use and look great. I know how to
-            use MERN and FARM tools, which include HTML, CSS, JavaScript, React,
-            Node.js, Python, and SQL. I&apos;m also good at using AI to make
-            smart and helpful websites. I can make websites that work on all
-            kinds of devices and are easy for everyone to use. I&apos;m good at
-            working with others, talking clearly, and solving problems. I want
-            to work on exciting projects and team up with talented people to
-            make new things happen in technology.
+          I&apos;m a Frontend Web Developer with over 2 years of experience in designing and building user-friendly, visually engaging websites. While my professional expertise lies in Frontend Development, I have strong knowledge and skills in Full-Stack Development, proficient in technologies such as HTML, CSS, JavaScript, React, Node.js, Python, and SQL. I specialize in creating responsive, cross-platform applications and utilizing AI to develop smart, efficient solutions. Passionate about collaboration, clear communication, and innovative problem-solving, I am eager to work on exciting projects and contribute to groundbreaking advancements with talented professionals
           </div>
         </div>
       </section>
